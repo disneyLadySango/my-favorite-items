@@ -1,0 +1,1 @@
+CREATE DATABASE my_favorite_items DEFAULT CHARACTER SET utf8;
