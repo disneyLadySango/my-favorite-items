@@ -1,4 +1,5 @@
 type Query {
+    getWorkProducts: [WorkProduct]
     getWorkProduct(id: ID!): WorkProduct
 }
 
@@ -7,12 +8,12 @@ type WorkProduct {
     name: String!
 }
 
-type Mutation {
-    registWorkProduct(name: String!, description: String!, releaseDate: String!): RegistWorkProductResponse
-}
-
-type RegistWorkProductResponse {
-    name: String!,
-    isRegist: Boolean!,
-    errorMessage: String
-}
+#type Mutation {
+#    registWorkProduct(name: String!, description: String!, releaseDate: String!): RegistWorkProductResponse
+#}
+#
+#type RegistWorkProductResponse {
+#    name: String!,
+#    isRegist: Boolean!,
+#    errorMessage: String
+#}

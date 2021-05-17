@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jp.co.disney.lady.sango.disney.infrastructures.mapper.WorkProductMapper">
+    <select id="getWorkProducts" resultType="jp.co.disney.lady.sango.disney.infrastructures.entities.WorkProductEntity">
+        select * from work_product
+    </select>
+    <select id="getWorkProduct" resultType="jp.co.disney.lady.sango.disney.infrastructures.entities.WorkProductEntity">
+        select * from work_product
+        where work_product.id = #{id}
+    </select>
+    <insert id="createWorkProduct">
+        INSERT INTO work_product (name)
+        VALUES (#{name})
+    </insert>
+</mapper>
