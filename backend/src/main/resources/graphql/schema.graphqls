@@ -1,11 +1,6 @@
 type Query {
-    getAuthorById(id: ID!): Author
-}
-
-type Author {
-    id: ID!
-    name: String!
-    workProduct: [WorkProduct]
+    getWorkProducts: [WorkProduct]
+    getWorkProduct(id: ID!): WorkProduct
 }
 
 type WorkProduct {
@@ -13,21 +8,12 @@ type WorkProduct {
     name: String!
 }
 
-type Mutation {
-    registAuthor(name: String!): RegistAuthorResponse
-    registWorkProduct(authorId: ID!, name: String!, description: String!, releaseDate: String!): RegistWorkProductResponse
-}
-
-type RegistAuthorResponse {
-    name: String!,
-    uid: String!,
-    isRegist: Boolean!,
-    errorMessage: String
-}
-
-type RegistWorkProductResponse {
-    authorId: ID!,
-    name: String!,
-    isRegist: Boolean!,
-    errorMessage: String
-}
+#type Mutation {
+#    registWorkProduct(name: String!, description: String!, releaseDate: String!): RegistWorkProductResponse
+#}
+#
+#type RegistWorkProductResponse {
+#    name: String!,
+#    isRegist: Boolean!,
+#    errorMessage: String
+#}
